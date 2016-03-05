@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 ***
 
@@ -42,7 +47,7 @@ steps_day <- activity %>% group_by(date) %>% summarize(total_steps=sum(steps))
 hist(steps_day$total_steps, main="Histogram of Steps Per Day", xlab="Steps Per Day", col="red")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
 
 ```r
 ## Mean and median number of steps taken each day
@@ -83,7 +88,7 @@ plot(steps_interval$interval,steps_interval$total_steps,
 )
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
 
 ```r
 ## The 5-minute interval that, on average, contains the maximum number of steps
@@ -128,7 +133,7 @@ steps_day_a2 <- a2 %>% group_by(date) %>% summarize(total_steps=sum(steps))
 hist(steps_day_a2$total_steps, main="Histogram of Steps Per Day After Imputing", xlab="Steps Per Day", col="red")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
 
 ```r
 # Calculate and print mean and median steps per day
@@ -173,6 +178,6 @@ ggplot(data=steps_interval_weekday, aes(x=interval, y=total_steps, colour=day_ty
         labs(x="Interval",y="Steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
 
 We can conclude that there are differences in activity patterns between weekdays and weekends.
